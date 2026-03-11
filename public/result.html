@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Resultado</title>
+</head>
+
+<body>
+
+<h2>Pago procesado</h2>
+
+<pre id="resultado"></pre>
+
+<script>
+
+const data = sessionStorage.getItem("paymentResult");
+
+document.getElementById("resultado").textContent = data;
+
+</script>
+
+</body>
+</html>
