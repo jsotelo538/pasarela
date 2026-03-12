@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const USERNAME = "50285112";
-const PASSWORD = "prodpassword_agGRZrNxTVacef4cmetzsMlGj4JQeiwwQFSHbw9W1zhY3";
+const PASSWORD = "prodpassword_gYsSzHQN9yhPkqrQveagOdHITrLN5xOYbzvJ99cgGQNq8";
 
 /* crear pago */
 app.post("/create-payment", async (req, res) => {
@@ -37,7 +37,7 @@ app.post("/create-payment", async (req, res) => {
       {
         auth: {
           username: "50285112",
-          password: "prodpassword_agGRZrNxTVacef4cmetzsMlGj4JQeiwwQFSHbw9W1zhY3"
+          password: "prodpassword_gYsSzHQN9yhPkqrQveagOdHITrLN5xOYbzvJ99cgGQNq8"
         }
       }
     );
@@ -71,6 +71,9 @@ app.get("/result", (req, res) => {
   res.sendFile(path.join(__dirname, "public/result.html"));
 });
 
+app.post("/result", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/result.html"));
+});
 app.listen(3001, () => {
   console.log("Servidor corriendo en puerto 3001");
 });
